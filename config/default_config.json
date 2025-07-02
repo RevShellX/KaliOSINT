@@ -1,0 +1,64 @@
+{
+  "version": "1.0.0",
+  "name": "KaliOSINT",
+  "description": "Advanced OSINT Terminal Tool",
+  "author": "KaliOSINT Team",
+  "license": "MIT",
+  "settings": {
+    "default_timeout": 30,
+    "max_threads": 10,
+    "rate_limit": 1,
+    "verbose": false,
+    "save_results": true,
+    "auto_report": false
+  },
+  "directories": {
+    "results": "~/.kaliosint/results",
+    "config": "~/.kaliosint/config",
+    "logs": "~/.kaliosint/logs",
+    "cache": "~/.kaliosint/cache"
+  },
+  "modules": {
+    "enabled": [
+      "domain",
+      "phone",
+      "email",
+      "social_media",
+      "website",
+      "network",
+      "crypto",
+      "dark_web"
+    ],
+    "experimental": [
+      "ai_analysis",
+      "threat_intel"
+    ]
+  },
+  "apis": {
+    "shodan": {
+      "enabled": false,
+      "rate_limit": 1,
+      "timeout": 30
+    },
+    "censys": {
+      "enabled": false,
+      "rate_limit": 1,
+      "timeout": 30
+    },
+    "numverify": {
+      "enabled": false,
+      "rate_limit": 1000,
+      "timeout": 10
+    },
+    "hibp": {
+      "enabled": false,
+      "rate_limit": 1500,
+      "timeout": 10
+    }
+  },
+  "wordlists": {
+    "subdomains": "config/wordlists/subdomains.txt",
+    "usernames": "config/wordlists/usernames.txt",
+    "passwords": "config/wordlists/passwords.txt"
+  }
+}
