@@ -1,0 +1,146 @@
+{
+  "_comment": "KaliOSINT Configuration File - Default settings and API configurations",
+  "version": "1.0.0",
+  "application": {
+    "name": "KaliOSINT",
+    "description": "Advanced OSINT Terminal Tool",
+    "author": "OSINT Community",
+    "created": "2024"
+  },
+  "settings": {
+    "max_results": 100,
+    "timeout": 30,
+    "rate_limit": 1,
+    "output_format": "table",
+    "save_results": true,
+    "verbose": false,
+    "debug": false
+  },
+  "directories": {
+    "config": "~/.kaliosint",
+    "results": "~/.kaliosint/results",
+    "logs": "~/.kaliosint/logs",
+    "temp": "~/.kaliosint/temp"
+  },
+  "api_keys": {
+    "shodan_api": "",
+    "censys_api_id": "",
+    "censys_api_secret": "",
+    "virustotal_api": "",
+    "hibp_api": "",
+    "twitter_bearer": "",
+    "telegram_bot_token": "",
+    "opencage_api": "",
+    "hunter_io_api": ""
+  },
+  "user_agents": [
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+  ],
+  "wordlists": {
+    "subdomains": [
+      "www", "mail", "ftp", "localhost", "webmail", "smtp", "pop", "ns1", "webdisk",
+      "ns2", "cpanel", "whm", "autodiscover", "autoconfig", "api", "admin", "dev",
+      "test", "staging", "blog", "shop", "support", "help", "portal", "mobile",
+      "cdn", "static", "assets", "images", "img", "video", "videos", "secure",
+      "login", "auth", "ssh", "vpn", "git", "gitlab", "github", "bitbucket"
+    ],
+    "common_ports": [21, 22, 23, 25, 53, 80, 110, 443, 993, 995, 1433, 3306, 3389, 5432, 5900, 8080, 8443],
+    "email_patterns": [
+      "{first}.{last}@{domain}",
+      "{first}{last}@{domain}",
+      "{f}{last}@{domain}",
+      "{first}{l}@{domain}",
+      "{f}.{last}@{domain}",
+      "{last}.{first}@{domain}",
+      "{last}@{domain}",
+      "{first}@{domain}"
+    ]
+  },
+  "social_platforms": {
+    "GitHub": "https://github.com/{username}",
+    "Twitter": "https://twitter.com/{username}",
+    "Instagram": "https://instagram.com/{username}",
+    "LinkedIn": "https://linkedin.com/in/{username}",
+    "Facebook": "https://facebook.com/{username}",
+    "Reddit": "https://reddit.com/user/{username}",
+    "YouTube": "https://youtube.com/@{username}",
+    "TikTok": "https://tiktok.com/@{username}",
+    "Pinterest": "https://pinterest.com/{username}",
+    "Tumblr": "https://{username}.tumblr.com",
+    "Medium": "https://medium.com/@{username}",
+    "DeviantArt": "https://{username}.deviantart.com",
+    "Behance": "https://behance.net/{username}",
+    "GitLab": "https://gitlab.com/{username}",
+    "Bitbucket": "https://bitbucket.org/{username}",
+    "Dribbble": "https://dribbble.com/{username}",
+    "Twitch": "https://twitch.tv/{username}",
+    "Steam": "https://steamcommunity.com/id/{username}",
+    "Spotify": "https://open.spotify.com/user/{username}",
+    "SoundCloud": "https://soundcloud.com/{username}"
+  },
+  "breach_resources": {
+    "haveibeenpwned": "https://haveibeenpwned.com/",
+    "dehashed": "https://www.dehashed.com/",
+    "breach_directory": "https://breachdirectory.org/",
+    "ghost_project": "https://www.ghostproject.fr/",
+    "leaked_source": "https://leakedsource.ru/",
+    "we_leak_info": "https://weleakinfo.to/"
+  },
+  "search_engines": {
+    "google": "https://www.google.com/search?q={query}",
+    "bing": "https://www.bing.com/search?q={query}",
+    "duckduckgo": "https://duckduckgo.com/?q={query}",
+    "yandex": "https://yandex.com/search/?text={query}",
+    "baidu": "https://www.baidu.com/s?wd={query}"
+  },
+  "dorking_examples": {
+    "files": [
+      "site:{domain} filetype:pdf",
+      "site:{domain} filetype:doc",
+      "site:{domain} filetype:xls",
+      "site:{domain} filetype:ppt"
+    ],
+    "directories": [
+      "site:{domain} intitle:\"index of\"",
+      "site:{domain} inurl:admin",
+      "site:{domain} inurl:login",
+      "site:{domain} inurl:backup"
+    ],
+    "sensitive": [
+      "site:{domain} \"password\"",
+      "site:{domain} \"api_key\"",
+      "site:{domain} \"secret\"",
+      "site:{domain} \"confidential\""
+    ]
+  },
+  "security_headers": {
+    "strict-transport-security": "HSTS Protection",
+    "x-frame-options": "Clickjacking Protection",
+    "x-content-type-options": "MIME Sniffing Protection",
+    "x-xss-protection": "XSS Protection",
+    "content-security-policy": "Content Security Policy",
+    "referrer-policy": "Referrer Policy",
+    "permissions-policy": "Permissions Policy"
+  },
+  "cryptocurrency": {
+    "bitcoin_explorers": [
+      "https://www.blockchain.com/btc/address/{address}",
+      "https://blockstream.info/address/{address}",
+      "https://live.blockcypher.com/btc/address/{address}/",
+      "https://btc.com/btc/address/{address}"
+    ],
+    "ethereum_explorers": [
+      "https://etherscan.io/address/{address}",
+      "https://etherchain.org/account/{address}",
+      "https://blockchair.com/ethereum/address/{address}"
+    ]
+  },
+  "legal_notice": {
+    "disclaimer": "This tool is for educational and authorized testing purposes only.",
+    "responsibility": "Users are responsible for complying with applicable laws.",
+    "ethics": "Use this tool responsibly and ethically.",
+    "permissions": "Only test systems you own or have explicit permission to test."
+  }
+}

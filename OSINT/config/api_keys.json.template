@@ -1,0 +1,13 @@
+{
+  "shodan_api": "YOUR_SHODAN_API_KEY_HERE",
+  "censys_api_id": "YOUR_CENSYS_API_ID_HERE",
+  "censys_api_secret": "YOUR_CENSYS_API_SECRET_HERE",
+  "numverify_api": "YOUR_NUMVERIFY_API_KEY_HERE",
+  "hibp_api": "YOUR_HIBP_API_KEY_HERE",
+  "whoisxml_api": "YOUR_WHOISXML_API_KEY_HERE",
+  "ipapi_key": "YOUR_IPAPI_KEY_HERE",
+  "virustotal_api": "YOUR_VIRUSTOTAL_API_KEY_HERE",
+  "telegram_bot_token": "YOUR_TELEGRAM_BOT_TOKEN_HERE",
+  "twitter_bearer": "YOUR_TWITTER_BEARER_TOKEN_HERE",
+  "instagram_session": "YOUR_INSTAGRAM_SESSION_ID_HERE"
+}
